@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "88825939913",
+    "project_id": "vlads-project-1547730756173",
+    "storage_bucket": "vlads-project-1547730756173.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:88825939913:android:975145d12974e4138b0a18",
+        "android_client_info": {
+          "package_name": "com.example.android.eggtimernotifications"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "88825939913-jj3dhrtgln98hqr85e36vkko6iv3t679.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.android.eggtimernotifications",
+            "certificate_hash": "9a7bd89c3e511a3a53a2f1e002a6e56d55aa9f92"
+          }
+        },
+        {
+          "client_id": "88825939913-gdnbmfs09sglulsk4jd0dt6b2ja19ur2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDIZygz0mk2OyeK1GIjhK4brSaL7kqcq6s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "88825939913-gdnbmfs09sglulsk4jd0dt6b2ja19ur2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
