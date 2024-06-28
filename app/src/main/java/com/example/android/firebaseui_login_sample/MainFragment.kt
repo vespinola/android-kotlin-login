@@ -46,7 +46,7 @@ class MainFragment : Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_main, container, false)
 
         // TODO Remove the two lines below once observeAuthenticationState is implemented.
@@ -112,14 +112,13 @@ class MainFragment : Fragment() {
         })
     }
 
-
     private fun getFactWithPersonalization(fact: String): String {
         return String.format(
             resources.getString(
-                R.string.welcome_message_authed,
-                FirebaseAuth.getInstance().currentUser?.displayName,
-                Character.toLowerCase(fact[0]) + fact.substring(1)
-            )
+                R.string.welcome_message_authed
+            ),
+            FirebaseAuth.getInstance().currentUser?.displayName,
+            Character.toLowerCase(fact[0]) + fact.substring(1)
         )
     }
 
@@ -138,7 +137,7 @@ class MainFragment : Fragment() {
         startActivityForResult(
             AuthUI.getInstance().createSignInIntentBuilder().setAvailableProviders(
                     providers
-                ).build(), MainFragment.SIGN_IN_RESULT_CODE
+                ).build(), SIGN_IN_RESULT_CODE
         )
     }
 }

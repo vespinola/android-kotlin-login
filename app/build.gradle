@@ -16,13 +16,14 @@
 
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
 
 android {
-    compileSdkVersion 30
+    compileSdk 34
     defaultConfig {
         applicationId "com.example.android.firebaseui_login_sample"
-        minSdkVersion 19
-        targetSdkVersion 30
+        minSdkVersion 21
+        targetSdkVersion 34
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
@@ -36,25 +37,31 @@ android {
     buildFeatures {
         dataBinding true
     }
+    namespace = "com.example.android.firebaseui_login_sample"
+
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_21
+        targetCompatibility = JavaVersion.VERSION_21
+    }
 }
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation 'androidx.appcompat:appcompat:1.2.0'
-    implementation 'androidx.activity:activity-ktx:1.1.0-alpha01'
-    implementation 'androidx.constraintlayout:constraintlayout:2.0.0-rc1'
-    implementation 'androidx.core:core-ktx:1.3.1'
-    implementation 'androidx.fragment:fragment-ktx:1.2.0-alpha01'
+    implementation 'androidx.appcompat:appcompat:1.7.0'
+    implementation 'androidx.activity:activity-ktx:1.9.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'androidx.core:core-ktx:1.13.1'
+    implementation 'androidx.fragment:fragment-ktx:1.7.1'
     implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
-    implementation "androidx.lifecycle:lifecycle-livedata-ktx:2.2.0"
-    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0'
-    implementation 'androidx.navigation:navigation-fragment-ktx:2.0.0'
-    implementation "androidx.navigation:navigation-ui-ktx:2.0.0"
-    implementation 'androidx.preference:preference-ktx:1.1.0-rc01'
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
-    implementation 'com.firebaseui:firebase-ui-auth:5.0.0'
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:2.8.1"
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.1'
+    implementation 'androidx.navigation:navigation-fragment-ktx:2.7.7'
+    implementation "androidx.navigation:navigation-ui-ktx:2.7.7"
+    implementation 'androidx.preference:preference-ktx:1.2.1'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
+    implementation 'com.firebaseui:firebase-ui-auth:7.2.0'
 
-    testImplementation 'junit:junit:4.12'
+    testImplementation 'junit:junit:4.13.2'
 }
 
 apply plugin: 'com.google.gms.google-services'
